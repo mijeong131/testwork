@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY STUDY</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        /* 상단 메뉴 */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #253448;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu a:hover {
+            color: #a8c7e8;
+        }
+
+        /* 메인 소개 영역 */
+        .intro {
+            text-align: center;
+            background-color: #e8eef5;
+            padding: 70px 20px;
+        }
+
+        .intro h1 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .intro p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* 메인 콘텐츠 */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+            border-left: 5px solid #253448;
+            padding-left: 12px;
+        }
+
+        /* 과목별 카드 */
+        .study-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .study-card {
+            display: block;
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+            transition: 0.2s;
+        }
+
+        .study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .study-card h3 {
+            margin-top: 0;
+            color: #253448;
+        }
+
+        .study-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .study-card span {
+            font-size: 13px;
+            color: #54799e;
+        }
+
+        /* 최근 학습 기록 */
+        .recent {
+            margin-top: 50px;
+        }
+
+        .recent-list {
+            list-style: none;
+            margin: 0;
+            padding: 0 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .recent-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .recent-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recent-list span {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* 하단 영역 */
+        .footer {
+            background-color: #253448;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* 반응형 디자인 */
+        @media screen and (max-width: 900px) {
+            .study-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .study-list {
+                grid-template-columns: 1fr;
+            }
+
+            .intro h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">MY STUDY</div>
+
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#study">STUDY</a></li>
+            <li><a href="#about">ABOUT</a></li>
+        </ul>
+    </header>
+
+    <section class="intro" id="about">
+        <p>PERSONAL STUDY ARCHIVE</p>
+        <h1>나의 공부 기록</h1>
+        <p>
+            정보통신공학을 공부하며 배운 내용을 기록하는 공간입니다.
+            <br>
+            오늘 배운 내용을 기록하고 꾸준히 성장합니다.
+        </p>
+    </section>
+
+    <main class="container">
+
+        <section id="study">
+            <h2 class="section-title">학습 카테고리</h2>
+
+            <div class="study-list">
+
+                <a href="html-css.html" class="study-card">
+                    <h3>HTML & CSS</h3>
+                    <p>웹페이지 구조, Flexbox, Grid, 반응형 디자인</p>
+                    <span>학습 내용 보기 →</span>
+                </a>
+
+                <a href="java.html" class="study-card">
+                    <h3>Java</h3>
+                    <p>객체지향 프로그래밍, 클래스, Spring Boot</p>
+                    <span>학습 내용 보기 →</span>
+                </a>
+
+                <a href="mysql.html" class="study-card">
+                    <h3>MySQL</h3>
+                    <p>데이터베이스, SQL, 테이블 및 CRUD</p>
+                    <span>학습 내용 보기 →</span>
+                </a>
+
+                <a href="python.html" class="study-card">
+                    <h3>Python</h3>
+                    <p>파이썬 기초, 데이터 분석, 머신러닝</p>
+                    <span>학습 내용 보기 →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="recent">
+            <h2 class="section-title">최근 학습 기록</h2>
+
+            <ul class="recent-list">
+                <li>
+                    CSS Flexbox 정리
+                    <span>HTML & CSS</span>
+                </li>
+
+                <li>
+                    Spring Boot CRUD 정리
+                    <span>Java</span>
+                </li>
+
+                <li>
+                    SELECT, INSERT, UPDATE, DELETE
+                    <span>MySQL</span>
+                </li>
+
+                <li>
+                    결정 트리 Decision Tree
+                    <span>Python</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 MY STUDY. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
