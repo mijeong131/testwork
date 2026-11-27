@@ -28,3 +28,9 @@
 
 ## 4. 참고사항
 [홈페이지](https://mijeong131.github.io/testwork/)
+
+## 5. 코드 처리 사항
+```python
+print("Hellow World");
+arr[1,2,3,4,5]
+```
